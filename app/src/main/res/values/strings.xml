@@ -95,4 +95,7 @@
     <string name="card_bt_saltar">saltar</string>
     <string name="card_tx_titu">Hello Moto</string>
     <string name="card_tx_large">welcome to the city</string>
+    <string name="caerd_input_url">URL image</string>
+    <string name="card_requeride">requerida</string>
+    <string name="card_paswor">password</string>
 </resources>
