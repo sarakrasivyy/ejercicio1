@@ -100,11 +100,12 @@
                     android:layout_width="0dp"
                     android:layout_height="@dimen/card_img_cover"
                     android:background="@color/design_default_color_secondary"
-                    android:importantForAccessibility="no"
+                    android:src="@mipmap/ic_launcher"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
+
                     android:id="@+id/txtitalt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -131,7 +132,8 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textUri" />
+                        android:inputType="textUri"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,7 +142,7 @@
                     style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
+
                     app:endIconMode="password_toggle"
                     app:layout_constraintEnd_toEndOf="@+id/txtitalt"
                     app:layout_constraintStart_toStartOf="@+id/textInputLayout"
@@ -152,7 +154,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/card_paswor"
-                         />
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.checkbox.MaterialCheckBox
@@ -163,6 +165,14 @@
                     android:layout_marginTop="@dimen/common_padding_default"
                     app:layout_constraintStart_toStartOf="@id/txtitalt"
                     app:layout_constraintTop_toBottomOf="@id/tiPaswor"/>
+                <!--<View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_middle"
+                    android:background="color/color_divider"
+                    app:layout_constraintStart_toStartOf="@id/txtitalt"
+                    app:layout_constraintEnd_toEndOf="@id/txtitalt"
+                    app:layout_constraintTop_toBottomOf="@id/cbEnablepass"/>-->
 
 <TextView
     android:id="@+id/txSUBTITLE"
@@ -170,10 +180,10 @@
     android:layout_height="wrap_content"
     android:text="@string/card_title"
     android:textAppearance="?attr/textAppearanceSubtitle1"
-    android:layout_marginTop="@dimen/common_paddin_middle"
+    android:layout_marginTop="@dimen/common_padding_middle"
     app:layout_constraintStart_toStartOf="@id/txtitalt"
     app:layout_constraintEnd_toEndOf="@id/txtitalt"
-    app:layout_constraintTop_toBottomOf=""
+    app:layout_constraintTop_toBottomOf="@id/cbEnablepass"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
