@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.example.ejercicio1.databinding.ActivityScrollingBinding
+import com.google.android.material.bottomappbar.BottomAppBar
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -15,6 +17,16 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+     findViewById<FloatingActionButton>(R.id.btfloat).setOnClickListener{
+         if (findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode==BottomAppBar.FAB_ALIGNMENT_MODE_CENTER){
+             findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_END
+
+             } else{
+             findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
+
+         }
+     }
 
     }
 

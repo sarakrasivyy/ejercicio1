@@ -101,6 +101,6 @@
     <string name="caerd_paswork">Enablepasswor</string>
     <string name="card_title">hello krass</string>
     <string name="card_toogle_red">red</string>
-    <string name="card_toogle_pink">pink</string>
     <string name="card_toogle_blue">blue</string>
+    <string name="card_toogle_pink">pink</string>
 </resources>

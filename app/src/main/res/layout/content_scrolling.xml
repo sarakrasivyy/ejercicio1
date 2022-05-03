@@ -19,7 +19,7 @@
             android:layout_marginTop="@dimen/common_padding_min"
             android:layout_marginEnd="@dimen/common_padding_min"
             android:layout_marginStart="@dimen/common_padding_min"
-            android:visibility="visible"
+
             android:clickable="true"
             android:focusable="true">
 
@@ -29,8 +29,7 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/common_padding_default"
                 android:paddingTop="@dimen/common_padding_default"
-                android:paddingEnd="@dimen/common_padding_default"
-                >
+                android:paddingEnd="@dimen/common_padding_default">
 
                 <ImageView
                     android:id="@+id/imgCard"
@@ -103,21 +102,21 @@
                     android:layout_height="@dimen/card_img_cover"
                     android:background="@color/design_default_color_secondary"
                     android:src="@mipmap/ic_launcher"
-                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
                 <TextView
 
                     android:id="@+id/txtitalt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/common_padding_default"
                     android:text="@string/card_tx_titu"
                     android:textAppearance="?attr/textAppearanceHeadline5"
-                    android:layout_margin="@dimen/common_padding_default"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/imTX"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imTX" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputLayout"
@@ -140,6 +139,7 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tiPaswor"
                     style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"
@@ -147,10 +147,10 @@
                     android:layout_height="wrap_content"
 
                     app:endIconMode="password_toggle"
+                    app:helperText="@string/card_requeride"
                     app:layout_constraintEnd_toEndOf="@+id/txtitalt"
                     app:layout_constraintStart_toStartOf="@+id/textInputLayout"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-                    app:helperText="@string/card_requeride">
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
                     <EditText
                         android:id="@+id/etpaswor"
@@ -164,10 +164,10 @@
                     android:id="@+id/cbEnablepass"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/caerd_paswork"
                     android:layout_marginTop="@dimen/common_padding_default"
+                    android:text="@string/caerd_paswork"
                     app:layout_constraintStart_toStartOf="@id/txtitalt"
-                    app:layout_constraintTop_toBottomOf="@id/tiPaswor"/>
+                    app:layout_constraintTop_toBottomOf="@id/tiPaswor" />
                 <!--<View
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -177,53 +177,28 @@
                     app:layout_constraintEnd_toEndOf="@id/txtitalt"
                     app:layout_constraintTop_toBottomOf="@id/cbEnablepass"/>-->
 
-<TextView
-    android:id="@+id/txSUBTITLE"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:text="@string/card_title"
-    android:textAppearance="?attr/textAppearanceSubtitle1"
-    android:layout_marginTop="@dimen/common_padding_middle"
-    app:layout_constraintStart_toStartOf="@id/txtitalt"
-    app:layout_constraintEnd_toEndOf="@id/txtitalt"
-    app:layout_constraintTop_toBottomOf="@id/cbEnablepass"/>
-
-          <androidx.appcompat.widget.AppCompatToggleButton
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:layout_marginTop="@dimen/common_padding_default"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintTop_toBottomOf="@id/txSUBTITLE">
-
-
-                <Button
-                    android:id="@+id/btred"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/txSUBTITLE"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/card_toogle_red"
-                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
-                <Button
-                    android:id="@+id/btblue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/card_toogle_blue"
-                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
-                <Button
-                    android:id="@+id/btpink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/card_toogle_pink"
-                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
+                    android:layout_marginTop="@dimen/common_padding_middle"
+                    android:text="@string/card_title"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintEnd_toEndOf="@id/txtitalt"
+                    app:layout_constraintStart_toStartOf="@id/txtitalt"
+                    app:layout_constraintTop_toBottomOf="@id/cbEnablepass" />
 
-          </androidx.appcompat.widget.AppCompatToggleButton>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </com.google.android.material.card.MaterialCardView>
 
+
     </LinearLayout>
+
 
 
 </androidx.core.widget.NestedScrollView>
