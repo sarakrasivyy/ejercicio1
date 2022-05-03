@@ -12,18 +12,21 @@ class ScrollingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScrollingBinding
 
+
+
+
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-     findViewById<FloatingActionButton>(R.id.btfloat).setOnClickListener{
-         if (findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode==BottomAppBar.FAB_ALIGNMENT_MODE_CENTER){
-             findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_END
+     binding.btbar.setOnClickListener{
+         if (binding.btbar.fabAlignmentMode==BottomAppBar.FAB_ALIGNMENT_MODE_CENTER){
+             binding.btbar.fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_END
 
              } else{
-             findViewById<BottomAppBar>(R.id.btbar).fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
+             binding.btbar.fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
 
          }
      }
