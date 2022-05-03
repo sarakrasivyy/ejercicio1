@@ -19,6 +19,7 @@
             android:layout_marginTop="@dimen/common_padding_min"
             android:layout_marginEnd="@dimen/common_padding_min"
             android:layout_marginStart="@dimen/common_padding_min"
+            android:visibility="visible"
             android:clickable="true"
             android:focusable="true">
 
@@ -28,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="@dimen/common_padding_default"
                 android:paddingTop="@dimen/common_padding_default"
-                android:paddingEnd="@dimen/common_padding_default">
+                android:paddingEnd="@dimen/common_padding_default"
+                >
 
                 <ImageView
                     android:id="@+id/imgCard"
@@ -101,6 +103,7 @@
                     android:layout_height="@dimen/card_img_cover"
                     android:background="@color/design_default_color_secondary"
                     android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -184,6 +187,37 @@
     app:layout_constraintStart_toStartOf="@id/txtitalt"
     app:layout_constraintEnd_toEndOf="@id/txtitalt"
     app:layout_constraintTop_toBottomOf="@id/cbEnablepass"/>
+
+          <androidx.appcompat.widget.AppCompatToggleButton
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/common_padding_default"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/txSUBTITLE">
+
+
+                <Button
+                    android:id="@+id/btred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_toogle_red"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
+                <Button
+                    android:id="@+id/btblue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_toogle_blue"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
+                <Button
+                    android:id="@+id/btpink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_toogle_pink"
+                    style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox.Dense"/>
+
+          </androidx.appcompat.widget.AppCompatToggleButton>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
