@@ -9,8 +9,10 @@
     tools:context=".ScrollingActivity">
 
 
-//vista inicio
-    <include layout="@layout/content_scrolling" />
+
+    <include
+        android:id="@+id/contenido"
+        layout="@layout/content_scrolling" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/btbar"
@@ -20,6 +22,7 @@
         app:navigationIcon="@drawable/ic_menu"
         app:menu="@menu/menu_scrolling"
         app:hideOnScroll="true"
+        app:fabAnimationMode="scale"
         style="@style/Widget.MaterialComponents.BottomAppBar.Colored"/>
 
 
@@ -29,7 +32,6 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
         android:contentDescription="@string/add"
-
         app:layout_anchor="@id/btbar"/>
 
 
