@@ -103,4 +103,8 @@
     <string name="card_toogle_red">red</string>
     <string name="card_toogle_blue">blue</string>
     <string name="card_toogle_pink">pink</string>
+    <string name="message_action_sucess">accion exitosa</string>
+    <string name="card_comprando">comprado</string>
+    <string name="card_to_go">ir</string>
+    <string name="card_historial">historial</string>
 </resources>

@@ -1,12 +1,17 @@
 package com.example.ejercicio1
 
 import android.os.Bundle
+
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
+import com.example.ejercicio1.R.string.message_action_sucess
 import com.example.ejercicio1.databinding.ActivityScrollingBinding
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -21,7 +26,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityScrollingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-     binding.btbar.setOnClickListener{
+     binding.btfloat.setOnClickListener{
          if (binding.btbar.fabAlignmentMode==BottomAppBar.FAB_ALIGNMENT_MODE_CENTER){
              binding.btbar.fabAlignmentMode=BottomAppBar.FAB_ALIGNMENT_MODE_END
 
@@ -30,7 +35,22 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
          }
      }
+    binding.btbar.setNavigationOnClickListener{
+        Snackbar.make( binding.root, message_action_sucess, Snackbar.LENGTH_LONG).setAnchorView(binding.btbar).show()
 
+    }
+
+    binding.contenido.btSkin!!.setOnClickListener{ binding.contenido.mcontenido!!.visibility=View.GONE }
+      //  Toast.makeText(this, "los", Toast.LENGTH_LONG)
+
+
+        binding.contenido.btcomprar!!.setOnClickListener {
+        Snackbar.make(it, R.string.card_comprando, Snackbar.LENGTH_LONG)
+            .setAnchorView(binding.btfloat)
+            .setAction(R.string.card_to_go, {
+            Toast.makeText(this, R.string.card_historial, Toast.LENGTH_SHORT).show()
+        }).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
